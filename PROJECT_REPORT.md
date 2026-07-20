@@ -15,7 +15,7 @@
 | Model training and checkpointing | Complete | The selected checkpoint is `models/best_model.keras`. |
 | Designated test-split evaluation | Complete | Final test metrics and `models/confusion_matrix.png` are available; independence by original source has not been established. |
 | Command-line inference | Implemented | `python main.py predict <image-path>`. |
-| Streamlit frontend | Implemented and launches locally | The UI includes validated test metrics, a confusion-matrix expander, upload safeguards, and the live upload-workflow screen in `screenshots/streamlit_home.png`. |
+| Streamlit frontend | Implemented and launches locally | The UI includes validated test metrics, a confusion-matrix expander, and upload safeguards. An approved frontend screenshot remains pending. |
 | Formal documentation | Complete | This report covers methodology, results, comparisons, output artifacts, limitations, links, conclusion, and future work. |
 | Docker packaging | Prepared | `Dockerfile` is present; a recorded production build/deployment smoke test is not part of the current evidence. |
 | Streamlit deployment | Deployed; access-restricted | The permanent endpoint is `https://coral-reef-bleaching-detection-efficientnetb0.streamlit.app/`; an anonymous health check on 20 July 2026 redirected to Streamlit sign-in. |
@@ -304,11 +304,10 @@ For a stronger experiment, the test split should remain untouched until all mode
 
 ### Streamlit upload workflow
 
-![Streamlit Coral Reef Health Assessment with its image-selection dialog open](screenshots/streamlit_home.png)
-
-*Figure 2. Local Streamlit frontend during image selection; the model and validation status remain visible behind the system file picker.*
-
-The home-screen image does not demonstrate a completed prediction. Before final academic submission, a representative image should be uploaded, **Analyze image** should be selected, and a third screenshot should record the predicted label and displayed score. That screenshot is pending rather than being represented by a fabricated example.
+The previously captured frontend image was intentionally removed pending privacy
+review. Before final academic submission, add an approved screenshot showing the
+model-ready interface and a representative prediction result. The missing image
+is recorded as pending rather than being replaced with a fabricated example.
 
 The local application is started with:
 
@@ -410,4 +409,4 @@ python main.py predict path\to\coral.jpg
 python main.py app
 ```
 
-The canonical artifacts are `models/best_model.keras`, `models/best_model.metadata.json`, `models/evaluation_metrics.json`, `models/confusion_matrix.png`, and `screenshots/streamlit_home.png`.
+The canonical artifacts are `models/best_model.keras`, `models/best_model.metadata.json`, `models/evaluation_metrics.json`, and `models/confusion_matrix.png`. An approved frontend screenshot should be added manually before final submission.

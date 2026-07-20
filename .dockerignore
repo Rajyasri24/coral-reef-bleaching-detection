@@ -18,6 +18,7 @@ capture_streamlit_*.ps1
 
 # Training data is large and is not required by the inference app.
 dataset/
+screenshots/
 
 .env
 .env.*

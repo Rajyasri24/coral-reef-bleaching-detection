@@ -74,8 +74,7 @@ split by original reef/site/video source.
 |   |-- best_model.metadata.json  # label/preprocessing contract
 |   |-- evaluation_metrics.json   # created by evaluation
 |   `-- confusion_matrix.png      # created by evaluation
-|-- screenshots/
-|   `-- streamlit_home.png        # documented model-ready UI
+|-- screenshots/                  # add approved UI screenshots manually
 |-- src/
 |   |-- config.py
 |   |-- dataset_loader.py
@@ -249,11 +248,9 @@ test accuracy, macro precision, macro recall, macro F1-score, sample count, and
 confusion matrix in a model-performance section. These dataset-level results are
 kept separate from the score for an individual upload.
 
-![Local Streamlit image-selection workflow](screenshots/streamlit_home.png)
-
-The checked-in screenshot records the live frontend during image selection. A separate
-uploaded-image prediction screenshot has not been recorded and is not represented
-by a fabricated result.
+The frontend screenshot is intentionally omitted pending privacy review. Add an
+approved image to `screenshots/` manually before final submission. No fabricated
+prediction result is included.
 
 ## 6. Deploy to Streamlit Community Cloud
 
