@@ -1,0 +1,54 @@
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Python caches and build output
+__pycache__/
+*.py[cod]
+*$py.class
+build/
+dist/
+*.egg-info/
+
+# Test, coverage, and tool caches
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.matplotlib-cache/
+.chrome-screenshot-profile/
+.browser-*/
+
+# Local screenshot-automation helpers
+capture_streamlit_*.ps1
+
+# Local data and generated model artifacts
+dataset/
+models/*.keras
+models/*.h5
+models/*.metadata.json
+models/confusion_matrix.png
+
+# Keep the canonical inference artifact in Git for Streamlit/Docker deployment.
+!models/best_model.keras
+!models/best_model.metadata.json
+!models/confusion_matrix.png
+!models/evaluation_metrics.json
+
+# Local configuration and logs
+.env
+.env.*
+!.env.example
+*.log
+
+# Editors and operating systems
+.agents/
+.codex/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

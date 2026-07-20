@@ -1,0 +1,18 @@
+{
+  "architecture": "EfficientNetB0",
+  "class_names": [
+    "Bleached",
+    "Healthy"
+  ],
+  "positive_class": "Healthy",
+  "image_size": [
+    224,
+    224
+  ],
+  "input_color_mode": "RGB",
+  "input_value_range": [
+    0,
+    255
+  ],
+  "normalization": "embedded in EfficientNetB0"
+}
