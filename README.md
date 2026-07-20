@@ -18,10 +18,13 @@ remaining stage**.
 | CLI inference and local Streamlit frontend | Complete |
 | Formal project report | Complete: [PROJECT_REPORT.md](PROJECT_REPORT.md) |
 | Docker packaging | Prepared; public container deployment not yet recorded |
-| GitHub/Drive links and public Streamlit URL | Pending user-provided repository/Drive locations and deployment |
+| GitHub and Streamlit deployment | Deployed; anonymous access currently redirects to Streamlit sign-in |
+| Dataset/code Drive links | Pending user-provided links |
 
 `http://localhost:8501` is a local address, not a permanent public URL. It is
 available only while the Streamlit process is running on the local machine.
+The hosted endpoint is
+[coral-reef-bleaching-detection-efficientnetb0.streamlit.app](https://coral-reef-bleaching-detection-efficientnetb0.streamlit.app/).
 
 ## Pipeline
 
@@ -254,9 +257,14 @@ by a fabricated result.
 
 ## 6. Deploy to Streamlit Community Cloud
 
-There is currently no public Streamlit URL. The repository and model artifacts
-are ready to be handed to the deployment stage, while repository hosting,
-Streamlit Community Cloud configuration, and the permanent URL remain pending.
+The application was deployed from the `main` branch to:
+
+<https://coral-reef-bleaching-detection-efficientnetb0.streamlit.app/>
+
+An unauthenticated health check on 20 July 2026 was redirected to Streamlit's
+login page. The deployment therefore exists but is currently access-restricted.
+For anonymous demonstration access, open the app's **Settings > Sharing** page
+in Streamlit Community Cloud and select the public-viewing option.
 
 Before deployment, confirm that the inference files will be included in the
 first commit:
@@ -360,9 +368,10 @@ virtual environments, dataset images, and credentials are absent. Also ensure
 `models/best_model.keras`, `models/best_model.metadata.json`,
 `models/evaluation_metrics.json`, and `models/confusion_matrix.png` are present.
 
-The remote repository URL has not yet been supplied. Once the project is pushed,
-it can be connected to Streamlit Community Cloud for the pending public
-deployment; the current model artifact is already small enough for ordinary Git.
+The `main` branch is hosted at
+[Rajyasri24/coral-reef-bleaching-detection](https://github.com/Rajyasri24/coral-reef-bleaching-detection)
+and is connected to the Streamlit Community Cloud deployment. The current model
+artifact is small enough for ordinary Git.
 
 ## Documentation and external links
 
@@ -371,8 +380,9 @@ deployment; the current model artifact is already small enough for ordinary Git.
 | Formal methodology, results, discussion, and conclusion | [PROJECT_REPORT.md](PROJECT_REPORT.md) |
 | Original dataset | [Kaggle: Coral Reefs Images](https://www.kaggle.com/datasets/asfarhossainsitab/coral-reefs-images) |
 | Dataset Drive link | **Pending user-provided link** |
-| Source-code repository / Drive link | **Pending user-provided link** |
-| Public Streamlit application | **Pending deployment**; local-only address: <http://localhost:8501> |
+| Source-code repository | [GitHub: Rajyasri24/coral-reef-bleaching-detection](https://github.com/Rajyasri24/coral-reef-bleaching-detection) |
+| Source-code Drive link | **Pending user-provided link** |
+| Streamlit application | [Hosted application](https://coral-reef-bleaching-detection-efficientnetb0.streamlit.app/) — deployed; anonymous requests currently redirect to sign-in |
 
 ## Responsible use
 

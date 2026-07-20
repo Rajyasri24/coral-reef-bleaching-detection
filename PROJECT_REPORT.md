@@ -18,8 +18,8 @@
 | Streamlit frontend | Implemented and launches locally | The UI includes validated test metrics, a confusion-matrix expander, upload safeguards, and the live upload-workflow screen in `screenshots/streamlit_home.png`. |
 | Formal documentation | Complete | This report covers methodology, results, comparisons, output artifacts, limitations, links, conclusion, and future work. |
 | Docker packaging | Prepared | `Dockerfile` is present; a recorded production build/deployment smoke test is not part of the current evidence. |
-| Public Streamlit deployment | Pending | No permanent Streamlit Community Cloud URL has been created or supplied. The local URL is `http://localhost:8501` only while the app process is running. |
-| Repository / Drive links | Pending user input | No code-repository URL or project Drive URL has been supplied; none is fabricated in this report. |
+| Streamlit deployment | Deployed; access-restricted | The permanent endpoint is `https://coral-reef-bleaching-detection-efficientnetb0.streamlit.app/`; an anonymous health check on 20 July 2026 redirected to Streamlit sign-in. |
+| Repository / Drive links | Partially complete | The GitHub repository is recorded below; dataset and code Drive links remain pending user input. |
 
 ---
 
@@ -333,7 +333,7 @@ uploaded JPEG/PNG
 
 The frontend limits uploads to 10 MB and rejects images above 25 million decoded pixels. It displays a model-readiness indicator, uploaded image, label-specific result message, confidence metric, progress bar, and responsible-use notice. It also reads `models/evaluation_metrics.json` to show the 94.2% test accuracy in the sidebar and provides a collapsed performance section containing accuracy, macro precision, macro recall, macro F1, sample count, and the confusion matrix. These dataset-level metrics are explicitly separated from the score for an uploaded image. The model loader is cached across Streamlit reruns. There is no separate REST API because it was outside this project's minimal Streamlit scope; `src/predict.py` is the inference backend used by both the CLI and frontend.
 
-The Dockerfile packages the inference application with Python 3.11, runs it as an unprivileged user, exposes port 8501, and includes a Streamlit health check. These artifacts make the project **deployment-ready in structure**, but deployment is not complete until the code and required model artifact are uploaded to a repository, a Streamlit Community Cloud app is configured, and the resulting public URL is smoke-tested.
+The Dockerfile packages the inference application with Python 3.11, runs it as an unprivileged user, exposes port 8501, and includes a Streamlit health check. The code and required model artifact are hosted in GitHub, and a Streamlit Community Cloud endpoint has been created. External verification currently redirects anonymous users to Streamlit sign-in, so unrestricted public visibility is not yet established.
 
 ## 3.7 Challenges and limitations
 
@@ -348,7 +348,7 @@ The Dockerfile packages the inference application with Python 3.11, runs it as a
 9. **No architecture comparison:** EfficientNetB0 was selected as a practical transfer-learning design, but the project did not experimentally compare it with other networks or a fine-tuned backbone.
 10. **Limited explainability:** No Grad-CAM visualization or region-level evidence is currently shown to help a marine expert inspect why a decision was made.
 11. **Dataset provenance and labels:** The project relies on external labels and does not independently verify the original annotation protocol, species coverage, geographic coverage, or licensing conditions beyond the supplied Kaggle source.
-12. **Deployment not yet validated publicly:** A Docker configuration and local UI exist, but no permanent hosted URL, hosted cold-start measurement, or public security/availability test is recorded.
+12. **Hosted access is currently restricted:** A permanent Streamlit endpoint exists, but anonymous requests redirect to sign-in. No anonymous prediction smoke test, hosted cold-start measurement, or public security/availability test is recorded.
 
 ## 3.8 Dataset, code, and Drive link status
 
@@ -356,9 +356,9 @@ The Dockerfile packages the inference application with Python 3.11, runs it as a
 | --- | --- |
 | Original dataset source | [Kaggle: Coral Reefs Images](https://www.kaggle.com/datasets/asfarhossainsitab/coral-reefs-images) |
 | Dataset Google Drive link | **Pending user-provided link**; no Drive copy has been supplied or verified for this report. |
-| Source-code repository | **Pending user-provided link**; no GitHub or other repository URL has been supplied. |
+| Source-code repository | [GitHub: Rajyasri24/coral-reef-bleaching-detection](https://github.com/Rajyasri24/coral-reef-bleaching-detection) |
 | Source-code Google Drive link | **Pending user-provided link**; no code Drive folder has been supplied or verified. |
-| Public Streamlit application | **Pending deployment**; the present test address is local-only: `http://localhost:8501`. |
+| Streamlit application | [Hosted application](https://coral-reef-bleaching-detection-efficientnetb0.streamlit.app/) — deployed; anonymous access redirected to Streamlit sign-in when checked on 20 July 2026. |
 
 The dataset itself should normally remain outside a public Git repository because of size and licensing considerations. If a Drive copy is required by the institution, its sharing permissions and compliance with the dataset's license should be checked before the final link is added.
 
@@ -372,7 +372,7 @@ This project delivered a compact coral-bleaching classification pipeline using a
 
 The final checkpoint achieved 94.16% test accuracy and 94.15% macro F1 on 257 supplied test images, with 242 correct predictions. This is substantially above the 52.53% majority-class accuracy baseline. The first checkpoint achieved a slightly higher test score by one image, while the final checkpoint had markedly better validation loss and was selected without using test accuracy as the criterion. These results demonstrate strong performance on the supplied split, but possible related-frame/preaugmentation leakage, the small test set, and the lack of external validation prevent treating 94.16% as a reliable field-performance estimate.
 
-The core local development and documentation work is therefore complete enough to move into the deployment phase. Public deployment itself is still pending: a repository/Drive location, Streamlit Community Cloud configuration, permanent URL, and final uploaded-image screenshot must be supplied or created.
+The core development, documentation, GitHub publication, and Streamlit deployment are complete. Remaining handoff items are enabling anonymous access if a public demonstration is required, recording a final hosted uploaded-image screenshot, and supplying the institution's requested dataset/code Drive links.
 
 ## 4.2 Future work
 
