@@ -5,8 +5,6 @@ coral photographs as **Healthy** or **Bleached**. It uses an ImageNet-pretrained
 EfficientNetB0 model for transfer learning and provides both command-line tools and
 a minimal Streamlit interface with prediction confidence.
 
-`http://localhost:8501` is a local address, not a permanent public URL. It is
-available only while the Streamlit process is running on the local machine.
 The hosted endpoint is
 [coral-reef-bleaching-detection-efficientnetb0.streamlit.app](https://coral-reef-bleaching-detection-efficientnetb0.streamlit.app/).
 
