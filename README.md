@@ -5,22 +5,6 @@ coral photographs as **Healthy** or **Bleached**. It uses an ImageNet-pretrained
 EfficientNetB0 model for transfer learning and provides both command-line tools and
 a minimal Streamlit interface with prediction confidence.
 
-## Project status
-
-Local development and documentation are complete; **public deployment is the
-remaining stage**.
-
-| Area | Status |
-| --- | --- |
-| Dataset validation, preprocessing, and augmentation | Complete |
-| EfficientNetB0 training and checkpoint selection | Complete |
-| Final test evaluation and saved metrics | Complete |
-| CLI inference and local Streamlit frontend | Complete |
-| Formal project report | Complete: [PROJECT_REPORT.md](PROJECT_REPORT.md) |
-| Docker packaging | Prepared; public container deployment not yet recorded |
-| GitHub and Streamlit deployment | Deployed; anonymous access currently redirects to Streamlit sign-in |
-| Dataset/code Drive links | Pending user-provided links |
-
 `http://localhost:8501` is a local address, not a permanent public URL. It is
 available only while the Streamlit process is running on the local machine.
 The hosted endpoint is
