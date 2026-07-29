@@ -247,10 +247,8 @@ and is connected to the Streamlit Community Cloud deployment. T
 | Resource | Link |
 | --- | --- |
 | Original dataset source | [Kaggle: Coral Reefs Images](https://www.kaggle.com/datasets/asfarhossainsitab/coral-reefs-images) |
-| Dataset Google Drive link | [https://drive.google.com/drive/folders/15cmbW6S-9nSbSJm6WrtOcKcExYmOMq_E?usp=drive_link] |
 | Source-code repository | [GitHub: Rajyasri24/coral-reef-bleaching-detection](https://github.com/Rajyasri24/coral-reef-bleaching-detection) |
-| Source-code Google Drive link | [https://drive.google.com/drive/folders/1THplwC2I6hrckfhmXMHp2SEiCydbvSzA?usp=drive_link]. |
-| Streamlit application | [Hosted application](https://coral-reef-bleaching-detection-efficientnetb0.streamlit.app/) 
+| Streamlit application | [https://coral-reef-bleaching-detection-efficientnetb0.streamlit.app/]
 ## Responsible use
 
 This model is an educational screening tool, not a substitute for marine-biologist
