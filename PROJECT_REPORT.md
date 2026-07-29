@@ -1,28 +1,5 @@
 # Coral Reef Bleaching Detection and Health Assessment Using Deep Learning
 
-## Project Report
-
-**Report status:** Local model-development pipeline and documentation complete; public deployment pending  
-**Report date:** 20 July 2026  
-**Task:** Binary classification of underwater coral images as **Bleached** or **Healthy**
-
-### Current implementation status
-
-| Component | Status | Evidence / remaining work |
-| --- | --- | --- |
-| Dataset ingestion and validation | Complete | 10,382 valid JPEG images were inventoried in the required train/valid/test structure. |
-| Preprocessing and augmentation | Complete | Implemented in `src/dataset_loader.py` and `src/train.py`. |
-| Model training and checkpointing | Complete | The selected checkpoint is `models/best_model.keras`. |
-| Designated test-split evaluation | Complete | Final test metrics and `models/confusion_matrix.png` are available; independence by original source has not been established. |
-| Command-line inference | Implemented | `python main.py predict <image-path>`. |
-| Streamlit frontend | Implemented and launches locally | The UI includes validated test metrics, a confusion-matrix expander, and upload safeguards. An approved frontend screenshot remains pending. |
-| Formal documentation | Complete | This report covers methodology, results, comparisons, output artifacts, limitations, links, conclusion, and future work. |
-| Docker packaging | Prepared | `Dockerfile` is present; a recorded production build/deployment smoke test is not part of the current evidence. |
-| Streamlit deployment | Deployed; access-restricted | The permanent endpoint is `https://coral-reef-bleaching-detection-efficientnetb0.streamlit.app/`; an anonymous health check on 20 July 2026 redirected to Streamlit sign-in. |
-| Repository / Drive links | Partially complete | The GitHub repository is recorded below; dataset and code Drive links remain pending user input. |
-
----
-
 # I. Introduction
 
 ## 1.1 Background
@@ -357,9 +334,7 @@ The Dockerfile packages the inference application with Python 3.11, runs it as a
 | Dataset Google Drive link | [https://drive.google.com/drive/folders/15cmbW6S-9nSbSJm6WrtOcKcExYmOMq_E?usp=drive_link] |
 | Source-code repository | [GitHub: Rajyasri24/coral-reef-bleaching-detection](https://github.com/Rajyasri24/coral-reef-bleaching-detection) |
 | Source-code Google Drive link | [https://drive.google.com/drive/folders/1THplwC2I6hrckfhmXMHp2SEiCydbvSzA?usp=drive_link]. |
-| Streamlit application | [Hosted application](https://coral-reef-bleaching-detection-efficientnetb0.streamlit.app/) — deployed; anonymous access redirected to Streamlit sign-in when checked on 20 July 2026. |
-
-The dataset itself should normally remain outside a public Git repository because of size and licensing considerations. If a Drive copy is required by the institution, its sharing permissions and compliance with the dataset's license should be checked before the final link is added.
+| Streamlit application | [Hosted application](https://coral-reef-bleaching-detection-efficientnetb0.streamlit.app/) 
 
 ---
 
