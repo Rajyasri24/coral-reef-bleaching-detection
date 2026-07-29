@@ -354,9 +354,9 @@ The Dockerfile packages the inference application with Python 3.11, runs it as a
 | Resource | Link / status |
 | --- | --- |
 | Original dataset source | [Kaggle: Coral Reefs Images](https://www.kaggle.com/datasets/asfarhossainsitab/coral-reefs-images) |
-| Dataset Google Drive link | **Pending user-provided link**; no Drive copy has been supplied or verified for this report. |
+| Dataset Google Drive link | [https://drive.google.com/drive/folders/15cmbW6S-9nSbSJm6WrtOcKcExYmOMq_E?usp=drive_link] |
 | Source-code repository | [GitHub: Rajyasri24/coral-reef-bleaching-detection](https://github.com/Rajyasri24/coral-reef-bleaching-detection) |
-| Source-code Google Drive link | **Pending user-provided link**; no code Drive folder has been supplied or verified. |
+| Source-code Google Drive link | [https://drive.google.com/drive/folders/1THplwC2I6hrckfhmXMHp2SEiCydbvSzA?usp=drive_link]. |
 | Streamlit application | [Hosted application](https://coral-reef-bleaching-detection-efficientnetb0.streamlit.app/) — deployed; anonymous access redirected to Streamlit sign-in when checked on 20 July 2026. |
 
 The dataset itself should normally remain outside a public Git repository because of size and licensing considerations. If a Drive copy is required by the institution, its sharing permissions and compliance with the dataset's license should be checked before the final link is added.
